@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create a Registration Form</title>
+        <style>
+           
+            #register-form {
+                width: 300px;
+                padding:24px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url('form.jpg');
+            }
+            .input-label {
+                margin: 0;
+                margin-bottom: 4px;
+                margin-top: 12px;
+            }
+            .input-item {
+                width: 100%;
+            }
+            #terms-check {
+                margin-top: 12px;
+                margin-bottom: 18px;
+            }
+            .btn{
+                background-color: lightgreen;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+
+    </head>
+    <body style="background-image: url('sample.jpg');">
+        <h1 style="text-align: center; color: whitesmoke; font-family: cursive;">Registration form</h1>
+        <form id="register-form" method="GET">
+            <div>
+                <p class="input-label">Full Name:</p>
+                <input class="input-item" type="text" name="fullname" placeholder="Full Name" autofocus required>
+           </div>
+           <div>
+               <p class="input-label">Email:</p>
+               <input class="input-item" type="email" name="email" placeholder="Email" required>
+           </div>
+
+           <div>
+               <p class="input-label">Age:</p>
+               <input class="input-item" type="number" name="age" placeholder="Enter Age between 18-45" min="18" max="45">
+           </div>
+           <div>
+               <p class="input-label">DOB:</p>
+               <input type="date" class="input-item">
+           </div>
+           <div>
+               <p class="input-label">Password:</p>
+               <input class="input-item" type="password" name="password" placeholder="Password" required minlength="8">
+           </div>
+           <div>
+               <p class="input-label">Confirm Password:</p>
+               <input class="input-item" type="password" name="confirm-password" placeholder="Confirm Password" required minlength="8">
+           </div>
+           <div>
+               <p class="input-label">Gender:</p>
+               <input type="radio" name="male" value="male">Male</input>
+               <input type="radio" name="female" value="female">Female</input>
+               <input type="radio" name="other" value="other">Other</input>
+           </div>
+           <div>
+               <p class="input-label">Security Question:</p>
+               <select class="input-item" name="security-question">
+                   <option value="first-pet-name">What was your first pet name?</option>
+                   <option value="first-job">What is your first job?</option>
+                   <option value="nick-name">What is your nick name?</option>
+               </select>
+           </div>
+           <div>
+               <textarea class="input-item" name="answer" id="" cols="30" rows="10" placeholder="Write what ever you think"></textarea>
+           </div>
+           <div>
+               <input id="terms-check" type="checkbox" name="terms-condition" value="accept">I agree to accept terms and conditions.
+           </div>
+
+           <input class="btn" type="submit" value="Register">
+        </form>
+    </body>
+</html>
